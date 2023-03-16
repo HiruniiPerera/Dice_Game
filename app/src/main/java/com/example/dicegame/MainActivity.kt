@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
@@ -15,9 +16,24 @@ class MainActivity : AppCompatActivity() {
         val new_btn = findViewById<Button>(R.id.newgame)
         new_btn.setOnClickListener {
 
+//            val name = findViewById<EditText>(R.id.nameedit).text.toString()
+            val target = findViewById<EditText>(R.id.edittarget).text.toString()
+//            var namestring = ""
+//            if (name==null){
+//                namestring= "You"
+//            }else{
+//                namestring= name
+//            }
+            var targetstring = ""
+            if (target == null){
+                targetstring = "101"
+            }else{
+                targetstring = target
+            }
             //using an intent to navigate to another activity
-            val intent_contact = Intent(this, newgame::class.java)
-            startActivity(intent_contact)
+            val intent = Intent(this, newgame::class.java)
+            intent.putExtra("Target",targetstring)
+            startActivity(intent)
         }
 
         //creating a button that will display a pop up window with details of the author

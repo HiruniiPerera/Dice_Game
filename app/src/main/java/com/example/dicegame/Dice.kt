@@ -1,6 +1,7 @@
 package com.example.dicegame
 
 import android.content.Context
+import android.graphics.Color
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageButton
