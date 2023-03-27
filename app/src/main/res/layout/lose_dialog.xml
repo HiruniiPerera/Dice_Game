@@ -12,13 +12,16 @@
         android:id="@+id/message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="#Ff0000" />
+        android:fontFamily="@font/archivo_narrow"
+        android:textColor="#Ff0000"
+        android:textSize="50sp" />
+
     <TextView
         android:id="@+id/m2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="10sp"/>
+        android:fontFamily="@font/archivo_narrow"
+        android:textSize="20sp" />
 </LinearLayout>
 
 
